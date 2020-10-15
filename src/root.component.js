@@ -6,6 +6,7 @@ import {
 } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import PokeList from "./components/poke-list";
+import { CssBaseline } from "@material-ui/core";
 
 const createTheme = darkMode =>
   createMuiTheme({
@@ -24,6 +25,7 @@ export default function Root(props) {
   return (
     <StylesProvider injectFirst>
       <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Container>
           <PokeList />
         </Container>
