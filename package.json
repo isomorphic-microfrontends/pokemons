@@ -46,15 +46,16 @@
     "style-loader": "^1.0.1",
     "systemjs-webpack-interop": "^1.1.2",
     "webpack": "^4.41.2",
-    "webpack-config-single-spa-react": "^1.0.3",
-    "webpack-merge": "^4.2.2",
     "webpack-cli": "^3.3.10",
-    "webpack-dev-server": "^3.9.0"
+    "webpack-config-single-spa-react": "^1.0.3",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "@material-ui/core": "^4.11.0",
-    "@material-ui/icons": "^4.9.1"
+    "unfetch": "^4.2.0"
   }
 }
