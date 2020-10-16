@@ -54,13 +54,13 @@ export default function Root(props) {
   };
 
   return (
-    <StylesProvider generateClassName={generateClassName} injectFirst>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+    <ThemeProvider theme={theme}>
+      <StylesProvider generateClassName={generateClassName}>
+        {loading && <LinearProgress color="secondary" />}
         <Container>
           <PokeList pokemons={pokemons} />
         </Container>
-      </ThemeProvider>
-    </StylesProvider>
+      </StylesProvider>
+    </ThemeProvider>
   );
 }
