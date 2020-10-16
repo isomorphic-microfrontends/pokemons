@@ -57,7 +57,6 @@ export default function Root(props) {
     <StylesProvider generateClassName={generateClassName} injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        {loading && <LinearProgress color="secondary" />}
         <Container>
           <PokeList pokemons={pokemons} />
         </Container>
