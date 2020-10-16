@@ -1,6 +1,7 @@
 import React from "react";
 import {
   StylesProvider,
+  createGenerateClassName,
   ThemeProvider,
   createMuiTheme
 } from "@material-ui/core/styles";
@@ -10,6 +11,10 @@ import PokeList from "./components/poke-list";
 import { CssBaseline } from "@material-ui/core";
 import { getPokemons } from "./api";
 
+const generateClassName = createGenerateClassName({
+  productionPrefix: "pk-",
+  seed: "pk-"
+});
 const createTheme = darkMode =>
   createMuiTheme({
     palette: {
@@ -49,7 +54,7 @@ export default function Root(props) {
   };
 
   return (
-    <StylesProvider injectFirst>
+    <StylesProvider generateClassName={generateClassName}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {loading && <LinearProgress color="secondary" />}
