@@ -54,7 +54,7 @@ export default function Root(props) {
   };
 
   return (
-    <StylesProvider generateClassName={generateClassName}>
+    <StylesProvider generateClassName={generateClassName} injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {loading && <LinearProgress color="secondary" />}
