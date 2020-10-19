@@ -120,7 +120,7 @@ export default function PokeList({ pokemons }) {
         {crumbs &&
           crumbs.map(({ to, name }) => {
             return (
-              <>
+              <div key={name}>
                 {to && (
                   <Link
                     color="inherit"
@@ -133,7 +133,7 @@ export default function PokeList({ pokemons }) {
                   </Link>
                 )}
                 {!to && <p className={classes.crumbLink}>{name}</p>}
-              </>
+              </div>
             );
           })}
       </Breadcrumbs>
