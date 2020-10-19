@@ -120,15 +120,20 @@ export default function PokeList({ pokemons }) {
         {crumbs &&
           crumbs.map(({ to, name }) => {
             return (
-              <Link
-                color="inherit"
-                component={RouterLink}
-                to={to}
-                key={name}
-                className={classes.crumbLink}
-              >
-                {name}
-              </Link>
+              <>
+                {to && (
+                  <Link
+                    color="inherit"
+                    component={RouterLink}
+                    to={to}
+                    key={name}
+                    className={classes.crumbLink}
+                  >
+                    {name}
+                  </Link>
+                )}
+                {!to && <p className={classes.crumbLink}>{name}</p>}
+              </>
             );
           })}
       </Breadcrumbs>
@@ -155,7 +160,7 @@ export default function PokeList({ pokemons }) {
     const { data, isLoading, isError } = useQuery(`${name}`, async () =>
       getPokeman(id)
     );
-    const crumbs = [defaultCrumb, { to: `/${id}/${name}`, name: name }];
+    const crumbs = [defaultCrumb, { name: name }];
 
     const getDetails = ({
       abilities,
