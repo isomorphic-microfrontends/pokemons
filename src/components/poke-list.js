@@ -132,7 +132,7 @@ export default function PokeList({ pokemons }) {
                     {name}
                   </Link>
                 )}
-                {!to && <p className={classes.crumbLink}>{name}</p>}
+                {!to && <div className={classes.crumbLink}>{name}</div>}
               </div>
             );
           })}
