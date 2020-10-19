@@ -57,6 +57,7 @@ export default function Root(props) {
     <ThemeProvider theme={theme}>
       <StylesProvider generateClassName={generateClassName}>
         {loading && <LinearProgress color="secondary" />}
+        {!loading && <div style={{ height: "4px" }} />}
         <Container>
           <PokeList pokemons={pokemons} />
         </Container>
