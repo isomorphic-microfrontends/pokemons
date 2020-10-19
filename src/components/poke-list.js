@@ -155,7 +155,7 @@ export default function PokeList({ pokemons }) {
     const { data, isLoading, isError } = useQuery(`${name}`, async () =>
       getPokeman(id)
     );
-    const crumbs = [defaultCrumb, { to: `/${name}`, name: name }];
+    const crumbs = [defaultCrumb, { to: `/${id}/${name}`, name: name }];
 
     const getDetails = ({
       abilities,
