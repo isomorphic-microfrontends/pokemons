@@ -8,7 +8,7 @@ import GridListTileBar from "@material-ui/core/GridListTileBar";
 import IconButton from "@material-ui/core/IconButton";
 import InfoIcon from "@material-ui/icons/Info";
 import PokeCrumbs from "./poke-crumbs";
-import { PokemonsContext } from "../pokemons-context";
+import usePokemons from "../use-pokemons";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -45,7 +45,7 @@ const defaultCrumb = { to: "/", name: "Pokemons" };
 const PokeListView = () => {
   const classes = useStyles();
   const theme = useTheme();
-  const { pokemons } = React.useContext(PokemonsContext);
+  const { pokemons } = usePokemons();
   const matches = useMediaQuery(theme.breakpoints.up("md"));
   const colNum = matches ? 4 : 2;
   const crumbs = [defaultCrumb];
