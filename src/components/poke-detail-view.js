@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     flexWrap: "wrap",
     justifyContent: "flex-start",
-    overflow: "auto"
+    overflow: "auto",
+    marginBottom: theme.spacing(2)
   },
   img: {
     objectFit: "none"
@@ -63,7 +64,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: "center",
     flexGrow: 1,
     margin: theme.spacing(1),
-    height: "97vh"
+    height: "50vh"
   }
 }));
 const defaultCrumb = { to: "/", name: "Pokemons" };

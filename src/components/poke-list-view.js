@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
     flexDirection: "column",
     flexWrap: "wrap",
     justifyContent: "flex-start",
-    overflow: "auto"
+    overflow: "auto",
+    marginBottom: theme.spacing(2)
   },
   gridList: {
     width: "100%",
