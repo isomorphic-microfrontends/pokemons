@@ -3,6 +3,7 @@ import ReactDOMServer from "react-dom/server.js";
 import Root from "./root.component.js";
 import { ServerStyleSheets } from "@material-ui/core/styles";
 import { getPokemons } from "./api";
+import "isomorphic-fetch";
 
 export const getResponseHeaders = props => {
   return {
