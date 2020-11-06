@@ -58,7 +58,7 @@ const PokeListView = () => {
           <GridListTile key={tile.name} className={classes.pokemon}>
             <img src={tile.img} alt={tile.name} className={classes.img} />
             <GridListTileBar
-              title={tile.name}
+              title={tile.name + "overridden"}
               color="primary"
               className={classes.title}
               actionIcon={
