@@ -1,5 +1,3 @@
-import fetch from "unfetch";
-
 export async function getPokemons() {
   try {
     const res = await fetch("https://pokeapi.co/api/v2/pokemon?limit=12");
