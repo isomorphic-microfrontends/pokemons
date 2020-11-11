@@ -11,6 +11,6 @@ export const createTheme = darkMode =>
   });
 
 export const generateClassName = createGenerateClassName({
-  productionPrefix: "pk-",
-  seed: "pk-"
+  productionPrefix: "pk-"
+  // seed: "pk-"
 });
