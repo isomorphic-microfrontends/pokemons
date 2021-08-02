@@ -18,7 +18,7 @@ Note the HTTP Port number that is shown in the output from webpack in the termin
 Now, open up the root config in a browser, at http://localhost:9000. Run the following in the browser console:
 
 ```sh
-localStorage.setItem('devtools');
+localStorage.setItem('devtools', true);
 window.location.reload();
 ```
 
